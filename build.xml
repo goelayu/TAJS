@@ -6,7 +6,7 @@
     <property name="version" value="0.25" />
 
     <property name="optimize" value="on" />
-    <property name="debug" value="off" />
+    <property name="debug" value="on" />
 
     <property name="statsquiet" value="false" />
 
@@ -53,7 +53,7 @@
         <echo message="Classpath is ${cp}"/>
         -->
         <mkdir dir="antbuild"/>
-        <javac srcdir="src" includes="**" destdir="antbuild" optimize="${optimize}"
+        <javac srcdir="src" includes="**" destdir="antbuild" optimize="${optimize}" debuglevel="lines,vars,source"
                 debug="${debug}" includeantruntime="false">
             <classpath refid="classpath" />
             <compilerarg line="-encoding ISO-8859-1 -Xlint:deprecation" compiler="modern" />
